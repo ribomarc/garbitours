@@ -38,6 +38,7 @@
                     <li><a ng-href="#/{{language}}/gallery">{{menuText.gallery}}</a></li>
                     <li><a ng-href="#/{{language}}/tips">{{menuText.tips}}</a></li>
                     <li><a ng-href="#/{{language}}/gifts">{{menuText.gifts}}</a></li>
+                    <li><a ng-href="#/{{language}}/{{section}}" ng-click="open()">{{menuText.contact}}</a></li>
                     <li class="max-width-30"><a ng-href="#/en/{{section}}"><img src="img/language/en.png" width="23" height="17"></a></li>
                     <li class="max-width-30"><a ng-href="#/br/{{section}}"><img src="img/language/br.jpg" width="23" height="17"></a></li>
                     <li class="max-width-30"><a ng-href="#/cat/{{section}}"><img src="img/language/cat.png" width="23" height="17"></a></li>
@@ -48,22 +49,59 @@
 
     <div ng-view></div>
 
+    <div class="container padding-80-up" ng-show="giftsList">
+        <div class="row">
+            <h1 style="text-indent: 2em;"><b>Lista de presentes virtual!</b></h1>
+        </div>
+        <br>
+        <div class="row padding-40-left">
+            <p>A seguinte lista de presentes é virtual! Os ítens abaixo representam vouchers para cada atividade.
+                Por exemplo, os vôos da lua de mel serão comprados com 30 vouchers de R$200.00</p>
+            <p>Essa seção é para quem nos queira nos ajudar com nossos primeiros gastos de casados,
+                oferecendo um sistema fácil para receber o dinheiro direto na nossa conta, já que não moramos no Brasil.</p>
+            <p>Ainda não sabemos onde vamos para nossa lua de mel, porque poderemos ir apenas no ano que vem.
+                Mas com certeza sabemos que será em um lugar tropical, preferencialmente em uma ilha, onde os ítens abaixo serão usados.
+                Idéias são bem vindas!!</p>
+            <p>Não se esqueça, a sua presença já é o melhor presente para nós!</p>
+        </div>
+        <div class="row padding-40-up" >
+            <div class="col-sm-4 ">
+                <div class="ecwid ecwid-SingleProduct ecwid-Product ecwid-Product-63503642" itemscope itemtype="http://schema.org/Product" data-single-product-id="63503642"><div itemprop="image"></div><div class="ecwid-title" itemprop="name"></div><div itemtype="http://schema.org/Offer" itemscope itemprop="offers"><div class="ecwid-productBrowser-price ecwid-price" itemprop="price"></div></div><div customprop="addtobag"></div></div><script type="text/javascript" src="https://app.ecwid.com/script.js?9102557&data_platform=singleproduct" charset="utf-8"></script><script type="text/javascript">xSingleProduct()</script>
+            </div>
+            <div class="col-sm-4">
+                <div class="ecwid ecwid-SingleProduct ecwid-Product ecwid-Product-63511488" itemscope itemtype="http://schema.org/Product" data-single-product-id="63511488"><div itemprop="image"></div><div class="ecwid-title" itemprop="name"></div><div itemtype="http://schema.org/Offer" itemscope itemprop="offers"><div class="ecwid-productBrowser-price ecwid-price" itemprop="price"></div></div><div customprop="addtobag"></div></div><script type="text/javascript" src="https://app.ecwid.com/script.js?9102557&data_platform=singleproduct" charset="utf-8"></script><script type="text/javascript">xSingleProduct()</script>
+            </div>
+            <div class="col-sm-4">
+                <div class="ecwid ecwid-SingleProduct ecwid-Product ecwid-Product-63511470" itemscope itemtype="http://schema.org/Product" data-single-product-id="63511470"><div itemprop="image"></div><div class="ecwid-title" itemprop="name"></div><div itemtype="http://schema.org/Offer" itemscope itemprop="offers"><div class="ecwid-productBrowser-price ecwid-price" itemprop="price"></div></div><div customprop="addtobag"></div></div><script type="text/javascript" src="https://app.ecwid.com/script.js?9102557&data_platform=singleproduct" charset="utf-8"></script><script type="text/javascript">xSingleProduct()</script>
+            </div>
+        </div>
+        <div class="row padding-40-up" >
+            <div class="col-sm-4 ">
+                <div class="ecwid ecwid-SingleProduct ecwid-Product ecwid-Product-63511408" itemscope itemtype="http://schema.org/Product" data-single-product-id="63511408"><div itemprop="image"></div><div class="ecwid-title" itemprop="name"></div><div itemtype="http://schema.org/Offer" itemscope itemprop="offers"><div class="ecwid-productBrowser-price ecwid-price" itemprop="price"></div></div><div customprop="addtobag"></div></div><script type="text/javascript" src="https://app.ecwid.com/script.js?9102557&data_platform=singleproduct" charset="utf-8"></script><script type="text/javascript">xSingleProduct()</script>
+            </div>
+            <div class="col-sm-4">
+                <div class="ecwid ecwid-SingleProduct ecwid-Product ecwid-Product-63511522" itemscope itemtype="http://schema.org/Product" data-single-product-id="63511522"><div itemprop="image"></div><div class="ecwid-title" itemprop="name"></div><div itemtype="http://schema.org/Offer" itemscope itemprop="offers"><div class="ecwid-productBrowser-price ecwid-price" itemprop="price"></div></div><div customprop="addtobag"></div></div><script type="text/javascript" src="https://app.ecwid.com/script.js?9102557&data_platform=singleproduct" charset="utf-8"></script><script type="text/javascript">xSingleProduct()</script>
+            </div>
+            <div class="col-sm-4">
+                <div class="ecwid ecwid-SingleProduct ecwid-Product ecwid-Product-63748803" itemscope itemtype="http://schema.org/Product" data-single-product-id="63748803"><div itemprop="image"></div><div class="ecwid-title" itemprop="name"></div><div itemtype="http://schema.org/Offer" itemscope itemprop="offers"><div class="ecwid-productBrowser-price ecwid-price" itemprop="price"></div></div><div customprop="addtobag"></div></div><script type="text/javascript" src="https://app.ecwid.com/script.js?9102557&data_platform=singleproduct" charset="utf-8"></script><script type="text/javascript">xSingleProduct()</script>
+            </div>
+        </div>
+        <div class="row padding-40-up" >
+            <div class="col-sm-4 ">
+                <div class="ecwid ecwid-SingleProduct ecwid-Product ecwid-Product-63748881" itemscope itemtype="http://schema.org/Product" data-single-product-id="63748881"><div itemprop="image"></div><div class="ecwid-title" itemprop="name"></div><div itemtype="http://schema.org/Offer" itemscope itemprop="offers"><div class="ecwid-productBrowser-price ecwid-price" itemprop="price"></div></div><div customprop="addtobag"></div></div><script type="text/javascript" src="https://app.ecwid.com/script.js?9102557&data_platform=singleproduct" charset="utf-8"></script><script type="text/javascript">xSingleProduct()</script>
+            </div>
+            <div class="col-sm-4 ">
+                <div class="ecwid ecwid-SingleProduct ecwid-Product ecwid-Product-63748920" itemscope itemtype="http://schema.org/Product" data-single-product-id="63748920"><div itemprop="image"></div><div class="ecwid-title" itemprop="name"></div><div itemtype="http://schema.org/Offer" itemscope itemprop="offers"><div class="ecwid-productBrowser-price ecwid-price" itemprop="price"></div></div><div customprop="addtobag"></div></div><script type="text/javascript" src="https://app.ecwid.com/script.js?9102557&data_platform=singleproduct" charset="utf-8"></script><script type="text/javascript">xSingleProduct()</script>
+            </div>
+        </div>
+    </div>
 
     <footer class="footer">
         <div class="container">
-            <audio controls autoplay preload="auto">
-                <source src="audios/Lifehouse.ogg" type="audio/ogg">
-                <source src="audios/01 Try.mp3" type="audio/mpeg">
-                <source src="audios/06_Pra_Sonhar.ogg" type="audio/ogg">
-                <source src="audios/06 Pra Sonhar.mp3" type="audio/mpeg">
-                <source src="audios/01 Felicidade.mp3" type="audio/mpeg">
-                <source src="audios/01_Felicidade.ogg" type="audio/ogg">
-                Your browser does not support the audio element.
-            </audio>
+            <audio-play-list></audio-play-list>
             <p>© 2015 Marc Ribo.</p>
         </div>
     </footer>
-
     <script src="dist/app.min.js"></script>
     <script src="js/app.js"></script>
 </body>
