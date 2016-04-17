@@ -359,3 +359,7 @@ IMG.displayed {
 	text-align: center;
 	background-color: #2a2730;
 }
+
+.hidden {
+	visibility: hidden;
+}

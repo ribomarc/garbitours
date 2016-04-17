@@ -14,7 +14,7 @@ var libs = [
 
 
 gulp.task('dist-js', function() {
-    gulp.src(libs)
+    gulp.src(libs.concat('js/app.js'))
         .pipe(concat('app'))
         .pipe(uglify())
         .pipe(rename({

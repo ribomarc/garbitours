@@ -129,6 +129,8 @@
             $scope.menuText = menuText[$scope.language || 'br'];
         }
 
+        $window.body_tag.classList.remove('hidden');
+
         $scope.$on('$locationChangeSuccess', function() {
             setParams();
             $window.scrollTo(0, 0);
