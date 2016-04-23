@@ -363,3 +363,7 @@ IMG.displayed {
 .hidden {
 	visibility: hidden;
 }
+
+.gifts-container {
+	min-height: 920px;
+}
