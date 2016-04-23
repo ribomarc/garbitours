@@ -32,12 +32,12 @@
             </div>
             <nav class="hidden-xs">
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a ng-href="#/{{language}}">{{menuText.home}}</a></li>
-                    <li><a ng-href="#/{{language}}/about-us">{{menuText.aboutUs}}</a></li>
-                    <li><a ng-href="#/{{language}}/program">{{menuText.program}}</a></li>
-                    <li><a ng-href="#/{{language}}/gallery">{{menuText.gallery}}</a></li>
-                    <li><a ng-href="#/{{language}}/tips">{{menuText.tips}}</a></li>
-                    <li><a ng-href="#/{{language}}/gifts">{{menuText.gifts}}</a></li>
+                    <li ng-class="{'active': !section}"><a ng-href="#/{{language}}">{{menuText.home}}</a></li>
+                    <li ng-class="{'active': section==='about-us'}"><a ng-href="#/{{language}}/about-us">{{menuText.aboutUs}}</a></li>
+                    <li ng-class="{'active': section==='program'}"><a ng-href="#/{{language}}/program">{{menuText.program}}</a></li>
+                    <li ng-class="{'active': section==='gallery'}"><a ng-href="#/{{language}}/gallery">{{menuText.gallery}}</a></li>
+                    <li ng-class="{'active': section==='tips'}"><a ng-href="#/{{language}}/tips">{{menuText.tips}}</a></li>
+                    <li ng-class="{'active': section==='gifts'}"><a ng-href="#/{{language}}/gifts">{{menuText.gifts}}</a></li>
                     <li><a ng-href="#/{{language}}/{{section}}" ng-click="open()">{{menuText.contact}}</a></li>
                     <li class="max-width-30"><a ng-href="#/en/{{section}}"><img src="img/language/en.png" width="23" height="17"></a></li>
                     <li class="max-width-30"><a ng-href="#/br/{{section}}"><img src="img/language/br.jpg" width="23" height="17"></a></li>

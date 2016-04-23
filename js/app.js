@@ -138,6 +138,12 @@
             $scope.giftsList = $scope.language === 'br' && $scope.section === 'gifts';
         });
 
+        $scope.$on('$locationChangeStart', function(event, next) {
+            if(~next.indexOf('!/~')) {
+                event.preventDefault();
+            }
+        });
+
         $scope.open = function() {
             $uibModal.open({
                 animation: true,
@@ -221,7 +227,7 @@
             replace: true,
             template: '<audio controls autoplay preload="auto" src="{{activeAudio}}">Your browser does not support the audio element.</audio>',
             link: function($scope, $element) {
-                var type = '',
+                var type = 'audio/mpeg',
                     index = -1;
 
                 function next() {
