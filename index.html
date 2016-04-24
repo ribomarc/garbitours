@@ -22,7 +22,7 @@
     <header class="navbar navbar-default navbar-fixed-top">
         <div class="container" ng-controller="navBarCtrl">
             <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" ng-click="isCollapsed = !isCollapsed">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse" ng-click="isCollapsed = !isCollapsed">
                     <span class="sr-only">Toggle navigation</span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
@@ -30,6 +30,20 @@
                 </button>
                 <a class="navbar-brand" ng-href="#/{{language}}">{{menuText.brand}}</a>
             </div>
+            <nav id="navbar-collapse" class="visible-xs collapse" uib-collapse="!isCollapsed">
+                <ul class="nav navbar-nav">
+                    <li ng-class="{'active': !section}"><a ng-href="#/{{language}}" ng-click="isCollapsed=false">{{menuText.home}}</a></li>
+                    <li ng-class="{'active': section==='about-us'}"><a ng-href="#/{{language}}/about-us" ng-click="isCollapsed=false">{{menuText.aboutUs}}</a></li>
+                    <li ng-class="{'active': section==='program'}"><a ng-href="#/{{language}}/program" ng-click="isCollapsed=false">{{menuText.program}}</a></li>
+                    <li ng-class="{'active': section==='gallery'}"><a ng-href="#/{{language}}/gallery" ng-click="isCollapsed=false">{{menuText.gallery}}</a></li>
+                    <li ng-class="{'active': section==='tips'}"><a ng-href="#/{{language}}/tips" ng-click="isCollapsed=false">{{menuText.tips}}</a></li>
+                    <li ng-class="{'active': section==='gifts'}"><a ng-href="#/{{language}}/gifts" ng-click="isCollapsed=false">{{menuText.gifts}}</a></li>
+                    <li><a ng-href="#/{{language}}/{{section}}" ng-click="open()">{{menuText.contact}}</a></li>
+                    <li class="max-width-30"><a ng-href="#/en/{{section}}"><img src="img/language/en.png" width="23" height="17"></a></li>
+                    <li class="max-width-30"><a ng-href="#/br/{{section}}"><img src="img/language/br.jpg" width="23" height="17"></a></li>
+                    <li class="max-width-30"><a ng-href="#/cat/{{section}}"><img src="img/language/cat.png" width="23" height="17"></a></li>
+                </ul>
+            </nav>
             <nav class="hidden-xs">
                 <ul class="nav navbar-nav navbar-right">
                     <li ng-class="{'active': !section}"><a ng-href="#/{{language}}">{{menuText.home}}</a></li>

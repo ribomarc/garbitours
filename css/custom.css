@@ -367,3 +367,7 @@ IMG.displayed {
 .gifts-container {
 	min-height: 920px;
 }
+
+#navbar-collapse {
+	overflow: hidden;
+}
