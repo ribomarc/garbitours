@@ -246,6 +246,12 @@
                     next();
                     $element.on('ended', function() {
                         next();
+                        $element[0].load();
+                        $element[0].play();
+
+                        if(!$scope.$$phase) {
+                            $scope.$apply();
+                        }
                     });
                 }
             }
