@@ -30,7 +30,7 @@
                 </button>
                 <a class="navbar-brand" ng-href="#/{{language}}">{{menuText.brand}}</a>
             </div>
-            <nav id="navbar-collapse" class="visible-xs collapse" uib-collapse="!isCollapsed">
+            <nav id="navbar-collapse" class="hidden-lg collapse" uib-collapse="!isCollapsed">
                 <ul class="nav navbar-nav">
                     <li ng-class="{'active': !section}"><a ng-href="#/{{language}}" ng-click="isCollapsed=false">{{menuText.home}}</a></li>
                     <li ng-class="{'active': section==='about-us'}"><a ng-href="#/{{language}}/about-us" ng-click="isCollapsed=false">{{menuText.aboutUs}}</a></li>
@@ -44,7 +44,7 @@
                     <li class="max-width-30"><a ng-href="#/cat/{{section}}"><img src="img/language/cat.png" width="23" height="17"></a></li>
                 </ul>
             </nav>
-            <nav class="hidden-xs">
+            <nav class="visible-lg">
                 <ul class="nav navbar-nav navbar-right">
                     <li ng-class="{'active': !section}"><a ng-href="#/{{language}}">{{menuText.home}}</a></li>
                     <li ng-class="{'active': section==='about-us'}"><a ng-href="#/{{language}}/about-us">{{menuText.aboutUs}}</a></li>
