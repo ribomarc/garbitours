@@ -1,0 +1,14 @@
+<div class="jumbotron text-center">
+    <div class="container jumb-text-padding">
+        <h3><span style="color: #FFFFFF">20.08.2016</h3></span>
+        <h1>Andressa e Marc</h1>
+        <h2><span style="color: #FFFFFF">{{counterText}} {{remainingDays}} dias!!</h2></span>
+    </div>
+</div>
+<div class="container">
+    <uib-carousel active="active" interval="myInterval" no-wrap="noWrapSlides">
+        <uib-slide ng-repeat="slide in slides track by $index" index="$index">
+            <img ng-src="{{slide}}" style="margin:auto;">
+        </uib-slide>
+    </uib-carousel>
+</div>

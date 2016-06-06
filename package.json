@@ -1,0 +1,41 @@
+{
+    "name": "wedding_website",
+    "version": "1.0.0",
+    "description": "Andressa e Marc wedding website",
+    "main": "app.js",
+    "dependencies": {
+        "angular": "^1.5.3",
+        "angular-animate": "^1.5.3",
+        "angular-route": "^1.5.3",
+        "angular-ui-bootstrap": "^1.3.1",
+        "bootstrap": "^3.3.6",
+        "gulp": "^3.9.1"
+    },
+    "devDependencies": {
+        "gulp-concat": "^2.6.0",
+        "gulp-livereload": "^3.8.1",
+        "gulp-rename": "^1.2.2",
+        "gulp-uglify": "^1.5.3",
+        "gulp-watch": "^4.3.5",
+        "http-server": "^0.9.0",
+        "parallelshell": "^2.0.0"
+    },
+    "scripts": {
+        "serve": "http-server -a localhost -p 8000",
+        "start": "parallelshell 'gulp' 'npm run serve'"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/ribomarc/wedding_website.git"
+    },
+    "keywords": [
+        "Marc",
+        "Andressa",
+        "wedding"
+    ],
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/ribomarc/wedding_website/issues"
+    },
+    "homepage": "https://github.com/ribomarc/wedding_website#readme"
+}
