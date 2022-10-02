@@ -1,7 +1,7 @@
 {
-    "name": "wedding_website",
+    "name": "garbitours",
     "version": "1.0.0",
-    "description": "Andressa e Marc wedding website",
+    "description": "Garbí Tours website",
     "main": "app.js",
     "dependencies": {
         "angular": "^1.5.3",
@@ -26,16 +26,15 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/ribomarc/wedding_website.git"
+        "url": "git+https://github.com/ribomarc/garbitours.git"
     },
     "keywords": [
-        "Marc",
-        "Andressa",
-        "wedding"
+        "Garbi",
+        "Tours"
     ],
     "license": "ISC",
     "bugs": {
-        "url": "https://github.com/ribomarc/wedding_website/issues"
+        "url": "https://github.com/ribomarc/garbitours/issues"
     },
-    "homepage": "https://github.com/ribomarc/wedding_website#readme"
+    "homepage": "https://github.com/ribomarc/garbitours#readme"
 }

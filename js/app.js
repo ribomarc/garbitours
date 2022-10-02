@@ -5,7 +5,7 @@
         millisecondsToDays = 1.15741e-8,
         menuText = {
             br: {
-                brand: 'Casamento Andressa e Marc',
+                brand: 'Garbí Tours',
                 home: 'Home',
                 aboutUs: 'Sobre nós',
                 program: 'Programa',
@@ -15,7 +15,7 @@
                 contact: 'Confirmação de presença'
             },
             en: {
-                brand: 'Wedding Andressa and Marc',
+                brand: 'Garbí Tours',
                 home: 'Home',
                 aboutUs: 'About us',
                 program: 'Program',
@@ -25,7 +25,7 @@
                 contact: 'Confirmation of assistance'
             },
             cat: {
-                brand: 'Casament Andressa i Marc',
+                brand: 'Garbí Tours',
                 home: 'Home',
                 aboutUs: 'Sobre nos.',
                 program: 'Programa',
@@ -173,13 +173,13 @@
         $scope.noWrapSlides = false;
         $scope.active = 0;
         $scope.slides = [
-            'http://andressaemarc.com/img/carousel/DSC_4568.JPG',
-            'http://andressaemarc.com/img/carousel/DSC_4453.JPG',
-            'http://andressaemarc.com/img/carousel/DSC_5039.JPG',
-            'http://andressaemarc.com/img/carousel/DSC_5015.JPG',
-            'http://andressaemarc.com/img/carousel/DSC_4761.JPG',
-            'http://andressaemarc.com/img/carousel/DSC_4474.JPG',
-            'http://andressaemarc.com/img/carousel/DSC_4573.JPG'
+            'http://garbitours.com/img/carousel/DSC_4568.JPG',
+            'http://garbitours.com/img/carousel/DSC_4453.JPG',
+            'http://garbitours.com/img/carousel/DSC_5039.JPG',
+            'http://garbitours.com/img/carousel/DSC_5015.JPG',
+            'http://garbitours.com/img/carousel/DSC_4761.JPG',
+            'http://garbitours.com/img/carousel/DSC_4474.JPG',
+            'http://garbitours.com/img/carousel/DSC_4573.JPG'
         ];
     }
 

@@ -2,7 +2,7 @@
 
 	define('DB_NAME','assistance_confirmation');
 	define('DB_USER','andressa_marc');
-	define('DB_PASSWORD','mjHack123.');
+	define('DB_PASSWORD','xyz.');
 	define('DB_HOST','andressaemarccom.ipagemysql.com');
 	
 	$link = mysql_connect(DB_HOST, DB_USER, DB_PASSWORD);

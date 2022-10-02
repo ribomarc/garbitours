@@ -90,7 +90,7 @@
 body {
 	padding-top: 0px;
 	padding-bottom: 0px; /* was 100px, changed 24.06.15 */
-	background-color: #F8DCBE; /* #2C3E50; #F8DCBE */
+	background-color: #9cf1ff; /* #2C3E50; #F8DCBE */
 }
 
 /* latin for font Playball*/
@@ -131,9 +131,9 @@ h4, h5, h6 {
 }
 
 .navbar-default {
-	background-color: #F8DCBE; /* #2C3E50; */
+	background-color: #9cf1ff; /* #2C3E50; */
 	border-color: #FFFFFF;
-	border-bottom: 3px solid #D2A370;
+	border-bottom: 3px solid #0011fc;
 	color: #2C3E50; 	   /* #FFFFFF; */
 }
 
@@ -145,7 +145,7 @@ h4, h5, h6 {
 
 .navbar-default .navbar-brand:hover,
 .navbar-default .navbar-brand:focus {
-	color: #D2A370;
+	color: #0011fc;
 	background-color: transparent;
 }
 
@@ -159,12 +159,12 @@ h4, h5, h6 {
 .navbar-default .navbar-nav > .active > a:hover,
 .navbar-default .navbar-nav > .active > a:focus {
 	color: #FFFFFF;
-	background-color: #D2A370;
+	background-color: #0011fc;
 }
 
 .navbar-default .navbar-nav > li > a:hover,
 .navbar-default .navbar-nav > li > a:focus {
-	color: #D2A370;
+	color: #0011fc;
 	background-color: transparent;
 }
 
@@ -172,13 +172,13 @@ h4, h5, h6 {
 .navbar-default .navbar-nav > .open > a:hover,
 .navbar-default .navbar-nav > .open > a:focus {
 	color: #FFFFFF;
-	background-color: #D2A370; /*#1A242F;*/
+	background-color: #0011fc; /*#1A242F;*/
 }
 
 .dropdown-menu {
     /*display: none;*/
     position: absolute;
-    background-color: #F8DCBE;
+    background-color: #9cf1ff;
     width: 50px;
 	font-family: 'Playball', cursive;
 	font-size: 18px;
@@ -196,16 +196,16 @@ h4, h5, h6 {
 .dropdown-menu > .active > a,
 .dropdown-menu > .active > a:hover,
 .dropdown-menu > .active > a:focus {
-    background-color: #D2A370;
+    background-color: #0011fc;
 }
 
 .dropdown-menu > li > a:hover,
 .dropdown-menu > li > a:focus {
-	color: #D2A370;
-    background-color: #F8DCBE;
+	color: #0011fc;
+    background-color: #9cf1ff;
 }
 
-.dropdown-menu a:hover {background-color: #D2A370}
+.dropdown-menu a:hover {background-color: #0011fc}
 
 
 .btn-gallery {
@@ -220,7 +220,7 @@ h4, h5, h6 {
 .btn-gallery:active,
 .btn-gallery.active,
 .open .dropdown-toggle.btn-gallery {
-	color: #D2A370;
+	color: #0011fc;
 }
 
 .btn-primary {
@@ -282,7 +282,7 @@ h4, h5, h6 {
 
 .thumbnail {
 	overflow: hidden;
-	/*background-color: #D2A370;*/
+	/*background-color: #0011fc;*/
 }
 
 .row .thumbnail {
@@ -298,7 +298,7 @@ IMG.displayed {
     margin-right: auto }
 
 .jumbotron {
-	background-image: url("http://andressaemarc.com/img/DSC_5162_large_bg.jpg");
+	background-image: url("http://garbitours.com/img/DSC_5162_large_bg.jpg");
 	background-size: cover;
 	/*min-width: 1920px;*/
 	min-height: 345px;
