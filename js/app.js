@@ -214,49 +214,7 @@
         } else {
             $scope.back = 'Voltar';
         }
-    }
-
-    function audioPlayList() {
-        var audios = {
-                'audio/mpeg': ['audios/06_Pra_Sonhar.mp3', 'audios/Lifehouse.mp3', 'audios/01_Felicidade.mp3', 'audios/01_Try.mp3'],
-                'audio/ogg': ['audios/06_Pra_Sonhar.ogg', 'audios/Lifehouse.ogg', 'audios/01_Felicidade.ogg', 'audios/01_Try.ogg']
-            };
-
-        return {
-            restrict: 'E',
-            replace: true,
-            template: '<audio controls autoplay preload="auto" src="{{activeAudio}}">Your browser does not support the audio element.</audio>',
-            link: function($scope, $element) {
-                var type = 'audio/mpeg',
-                    index = -1;
-
-                function next() {
-                    index =  (index +1) % audios[type].length;
-                    $scope.activeAudio = audios[type][index];
-                }
-
-                for(var name in audios) {
-                    if(audios.hasOwnProperty(name) && $element[0].canPlayType(name) === 'probably') {
-                        type = name;
-                        break;
-                    }
-                }
-
-                if(type) {
-                    next();
-                    $element.on('ended', function() {
-                        next();
-                        $element[0].load();
-                        $element[0].play();
-
-                        if(!$scope.$$phase) {
-                            $scope.$apply();
-                        }
-                    });
-                }
-            }
-        };
-    }
+    }   
 
     angular.module('app', ['ngRoute', 'ngAnimate', 'ui.bootstrap'])
         .config(['$routeProvider', config])
