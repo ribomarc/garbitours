@@ -1,45 +1,29 @@
 ;(function() {
     'use strict';
 
-    var weddingDate = 1471644000000,
-        millisecondsToDays = 1.15741e-8,
-        menuText = {
-            br: {
-                brand: 'Garbí Tours',
-                home: 'Home',
-                aboutUs: 'Sobre nós',
-                program: 'Programa',
-                gallery: 'Fotos',
-                tips: 'Dicas',
-                gifts: 'Presentes',
-                contact: 'Confirmação de presença'
-            },
+    var menuText = {            
             en: {
                 brand: 'Garbí Tours',
                 home: 'Home',
                 aboutUs: 'About us',
-                program: 'Program',
-                gallery: 'Photos',
-                tips: 'Tips',
-                gifts: 'Gifts',
-                contact: 'Confirmation of assistance'
+                program: 'Tours',             
+                gallery: 'Gallery',                                
+                contact: 'Contact'
             },
             cat: {
                 brand: 'Garbí Tours',
                 home: 'Home',
-                aboutUs: 'Sobre nos.',
-                program: 'Programa',
-                gallery: 'Fotos',
-                tips: 'Consells',
-                gifts: 'Regals',
-                contact: 'Confirmació de presencia'
+                aboutUs: 'Qui som',
+                program: 'Tours',
+                gallery: 'Fotos',                
+                contact: 'Contacte'
             }
         };
 
     function config($routeProvider) {
         $routeProvider
             .when('/:language?', {
-                templateUrl: 'templates/home.html',
+                templateUrl: 'templates/index.html',
                 controller: 'homeCtrl'
             })
             .when('/:language?/about-us', {
@@ -69,21 +53,7 @@
                     return 'templates/gallery/' + album + '.html';
                 },
                 controller: 'albumCtrl'
-            })
-            .when('/:language?/tips', {
-                templateUrl: function(params) {
-                    var lang = params.language || 'br';
-
-                    return 'templates/' + lang + '/tips.html';
-                }
-            })
-            .when('/:language?/gifts', {
-                templateUrl: function(params) {
-                    var lang = params.language || 'br';
-
-                    return 'templates/' + lang + '/gifts.html';
-                }
-            })
+            })            
             .otherwise({
                 redirectTo: '/'
             });
@@ -157,17 +127,7 @@
     }
 
     function homeCtrl($scope, getParams) {
-        var language = getParams.language();
-
-        if(language === 'en') {
-            $scope.counterText = 'We\'re getting married in ';
-        } else if(language === 'cat') {
-            $scope.counterText = 'Ens casem en ';
-        } else {
-            $scope.counterText = 'Nos casamos em ';
-        }
-
-        $scope.remainingDays = parseInt((weddingDate - Date.now()) * millisecondsToDays, 10);
+        var language = getParams.language();        
 
         $scope.myInterval = 5000;
         $scope.noWrapSlides = false;

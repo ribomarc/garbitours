@@ -1,119 +1,165 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Garbí Tours</title>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+		<title>Garbí Tours</title>
 
-    <!-- Bootstrap -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <!-- link to customized design -->
-    <link href="css/custom.css" rel="stylesheet">
-    <!-- link to fonts -->
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Dancing+Script' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Kalam' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-</head>
-<body ng-app="app" class="hidden">
+		<!-- Bootstrap -->
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<!-- link to customized design -->
+		<link href="css/custom.css" rel="stylesheet">
+		<!-- link to fonts -->
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Dancing+Script' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Kalam' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+		<!-- include jquery -->
+		<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+		<!-- include diverse .html -->
+		<script src="js/function.loader.js"></script>		
+		<!-- include cookies functions -->
+		<script src="js/functions.cookies.js"></script>
+		<!-- include hitcounter -->
+		<!-- <script src="js/hit.counter.js"></script> -->
+		<!-- link to soundcloud design -->
+		<link rel="stylesheet" href="css/sc-player-minimal.css" rel="text/css">
+		<script type="text/javascript">
+            $(window).on("load", function() {
+                
+            });
+        </script>
+	</head>
+	<body>
+		<!-- Facebook "like" button -->
+		<script src="js/facebook.like.js"></script>
+		
+		<!-- Fixed header -->
+		<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target =".navbar-collapse">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="#">Garbí Tours</a>
+				</div>
+				<div class="navbar-collapse collapse">
+					<ul class="nav navbar-nav navbar-right">
+						<li class="active"><a href="#">Home</a></li>
+						<li><a href="page_about_us.html">About us</a></li>
+						<li><a href="page_program.html">Tours</a></li>
+						<li><a href="page_gallery.html">Gallery</a></li>														
+						<li><a href="#contact" data-toggle="modal">Contact</a></li>
 
-    <header class="navbar navbar-default navbar-fixed-top">
-        <div class="container" ng-controller="navBarCtrl">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse" ng-click="isCollapsed = !isCollapsed">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" ng-href="#/{{language}}">{{menuText.brand}}</a>
-            </div>
-            <nav id="navbar-collapse" class="hidden-lg collapse" uib-collapse="!isCollapsed">
-                <ul class="nav navbar-nav">
-                    <li ng-class="{'active': !section}"><a ng-href="#/{{language}}" ng-click="isCollapsed=false">{{menuText.home}}</a></li>
-                    <li ng-class="{'active': section==='about-us'}"><a ng-href="#/{{language}}/about-us" ng-click="isCollapsed=false">{{menuText.aboutUs}}</a></li>
-                    <li ng-class="{'active': section==='program'}"><a ng-href="#/{{language}}/program" ng-click="isCollapsed=false">{{menuText.program}}</a></li>
-                    <li ng-class="{'active': section==='gallery'}"><a ng-href="#/{{language}}/gallery" ng-click="isCollapsed=false">{{menuText.gallery}}</a></li>
-                    <li ng-class="{'active': section==='tips'}"><a ng-href="#/{{language}}/tips" ng-click="isCollapsed=false">{{menuText.tips}}</a></li>
-                    <li ng-class="{'active': section==='gifts'}"><a ng-href="#/{{language}}/gifts" ng-click="isCollapsed=false">{{menuText.gifts}}</a></li>
-                    <li><a ng-href="#/{{language}}/{{section}}" ng-click="open()">{{menuText.contact}}</a></li>
-                    <li class="max-width-30"><a ng-href="#/en/{{section}}"><img src="img/language/en.png" width="23" height="17"></a></li>                    
-                    <li class="max-width-30"><a ng-href="#/cat/{{section}}"><img src="img/language/cat.png" width="23" height="17"></a></li>
-                </ul>
-            </nav>
-            <nav class="visible-lg">
-                <ul class="nav navbar-nav navbar-right">
-                    <li ng-class="{'active': !section}"><a ng-href="#/{{language}}">{{menuText.home}}</a></li>
-                    <li ng-class="{'active': section==='about-us'}"><a ng-href="#/{{language}}/about-us">{{menuText.aboutUs}}</a></li>
-                    <li ng-class="{'active': section==='program'}"><a ng-href="#/{{language}}/program">{{menuText.program}}</a></li>
-                    <li ng-class="{'active': section==='gallery'}"><a ng-href="#/{{language}}/gallery">{{menuText.gallery}}</a></li>
-                    <li ng-class="{'active': section==='tips'}"><a ng-href="#/{{language}}/tips">{{menuText.tips}}</a></li>
-                    <li ng-class="{'active': section==='gifts'}"><a ng-href="#/{{language}}/gifts">{{menuText.gifts}}</a></li>
-                    <li><a ng-href="#/{{language}}/{{section}}" ng-click="open()">{{menuText.contact}}</a></li>
-                    <li class="max-width-30"><a ng-href="#/en/{{section}}"><img src="img/language/en.png" width="23" height="17"></a></li>                    
-                    <li class="max-width-30"><a ng-href="#/cat/{{section}}"><img src="img/language/cat.png" width="23" height="17"></a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+						<li class="max-width-30"><a href="#"><img src="img/language/en.png" width="23" height="17"></a></li>						
+						<li class="max-width-30"><a href="cat/index.html"><img src="img/language/cat.png" width="23" height="17"></a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		
+		<div class="jumbotron text-center">
+			<div class="container jumb-text-padding">
+				<h1>Garbi Tours</h1>
+			</div>
+		</div>
 
-    <div ng-view></div>
+		<div class="container">
+			<div id="carousel-photo-slideshow" class="carousel slide" data-ride="carousel" data-interval="5000"> <!-- data-ride makes it slide -->
+				<!-- Indicators -->
+				<ol class="carousel-indicators">
+					<li data-target="#carousel-photo-slideshow" data-slide-to="0" class="active"></li>
+					<li data-target="#carousel-photo-slideshow" data-slide-to="1"></li>
+					<li data-target="#carousel-photo-slideshow" data-slide-to="2"></li>
+					<li data-target="#carousel-photo-slideshow" data-slide-to="3"></li>
+					<li data-target="#carousel-photo-slideshow" data-slide-to="4"></li>
+					<li data-target="#carousel-photo-slideshow" data-slide-to="5"></li>
+					<li data-target="#carousel-photo-slideshow" data-slide-to="6"></li>					
+				</ol>
+				 
+				<!-- Wrapper for slides -->
+				<div class="carousel-inner">
+					<div class="item active">
+						<img src="http://garbitours.com/img/carousel/IMG_7854.jpeg" alt="photo 1">
+						<div class="carousel-caption">
+							<h3></h3>
+						</div>
+					</div>
+					<div class="item">
+						<img src="http://garbitours.com/img/carousel/20201018_150650.jpg" alt="photo 2">
+						<div class="carousel-caption">
+							<h3></h3>
+						</div>
+					</div>
+					<div class="item">
+						<img src="http://garbitours.com/img/carousel/20220608_151748.jpg" alt="photo 3">
+						<div class="carousel-caption">
+							<h3></h3>
+						</div>
+					</div>
+					<div class="item">
+						<img src="http://garbitours.com/img/carousel/DJI_0007.JPG" alt="photo 4">
+						<div class="carousel-caption">
+							<h3></h3>
+						</div>
+					</div>
+					<div class="item">
+						<img src="http://garbitours.com/img/carousel/IMG_5863.JPG" alt="photo 5">
+						<div class="carousel-caption">
+							<h3></h3>
+						</div>
+					</div>
+					<div class="item">
+						<img src="http://garbitours.com/img/carousel/IMG_5888.JPG" alt="photo 6">
+						<div class="carousel-caption">
+							<h3></h3>
+						</div>
+					</div>
+					<div class="item">
+						<img src="http://garbitours.com/img/carousel/IMG_7672.jpeg" alt="photo 7">
+						<div class="carousel-caption">
+							<h3></h3>
+						</div>
+					</div>
+				</div>
+				 
+				<!-- Controls -->
+				<a class="left carousel-control" href="#carousel-photo-slideshow" role="button" data-slide="prev">
+					<span class="glyphicon glyphicon-chevron-left"></span>
+				</a>
+				<a class="right carousel-control" href="#carousel-photo-slideshow" role="button" data-slide="next">
+					<span class="glyphicon glyphicon-chevron-right"></span>
+				</a>
+			</div> <!-- Carousel -->			
+		</div>
+		
+		
+		<!-- Fixed footer -->
+		<div class="navbar navbar-inverse navbar-fixed-bottom" role="navigation">
+			<div class="container">
+				<div class="navbar-text pull-left">
+					<p>© 2022 Marc Ribó</p>
+				</div>
+								
+			</div>
+		</div>
+		
 
-    <div class="container padding-80-up" ng-show="giftsList">
-        <div class="row">
-            <h1 style="text-indent: 2em;"><b>Lista de presentes virtual!</b></h1>
-        </div>
-        <br>
-        <div class="row padding-40-left">
-            <p>A seguinte lista de presentes é virtual! Os ítens abaixo representam vouchers para cada atividade.
-                Por exemplo, os vôos da lua de mel serão comprados com 30 vouchers de R$200.00</p>
-            <p>Essa seção é para quem nos queira nos ajudar com nossos primeiros gastos de casados,
-                oferecendo um sistema fácil para receber o dinheiro direto na nossa conta, já que não moramos no Brasil.</p>
-            <p>Ainda não sabemos onde vamos para nossa lua de mel, porque poderemos ir apenas no ano que vem.
-                Mas com certeza sabemos que será em um lugar tropical, preferencialmente em uma ilha, onde os ítens abaixo serão usados.
-                Idéias são bem vindas!!</p>
-            <p>Não se esqueça, a sua presença já é o melhor presente para nós!</p>
-        </div>
-        <div class="row padding-40-up" >
-            <div class="col-sm-4 ">
-                <div class="ecwid ecwid-SingleProduct ecwid-Product ecwid-Product-63503642" itemscope itemtype="http://schema.org/Product" data-single-product-id="63503642"><div itemprop="image"></div><div class="ecwid-title" itemprop="name"></div><div itemtype="http://schema.org/Offer" itemscope itemprop="offers"><div class="ecwid-productBrowser-price ecwid-price" itemprop="price"></div></div><div customprop="addtobag"></div></div><script type="text/javascript" src="https://app.ecwid.com/script.js?9102557&data_platform=singleproduct" charset="utf-8"></script><script type="text/javascript">xSingleProduct()</script>
-            </div>
-            <div class="col-sm-4">
-                <div class="ecwid ecwid-SingleProduct ecwid-Product ecwid-Product-63511488" itemscope itemtype="http://schema.org/Product" data-single-product-id="63511488"><div itemprop="image"></div><div class="ecwid-title" itemprop="name"></div><div itemtype="http://schema.org/Offer" itemscope itemprop="offers"><div class="ecwid-productBrowser-price ecwid-price" itemprop="price"></div></div><div customprop="addtobag"></div></div><script type="text/javascript" src="https://app.ecwid.com/script.js?9102557&data_platform=singleproduct" charset="utf-8"></script><script type="text/javascript">xSingleProduct()</script>
-            </div>
-            <div class="col-sm-4">
-                <div class="ecwid ecwid-SingleProduct ecwid-Product ecwid-Product-63511470" itemscope itemtype="http://schema.org/Product" data-single-product-id="63511470"><div itemprop="image"></div><div class="ecwid-title" itemprop="name"></div><div itemtype="http://schema.org/Offer" itemscope itemprop="offers"><div class="ecwid-productBrowser-price ecwid-price" itemprop="price"></div></div><div customprop="addtobag"></div></div><script type="text/javascript" src="https://app.ecwid.com/script.js?9102557&data_platform=singleproduct" charset="utf-8"></script><script type="text/javascript">xSingleProduct()</script>
-            </div>
-        </div>
-        <div class="row padding-40-up" >
-            <div class="col-sm-4 ">
-                <div class="ecwid ecwid-SingleProduct ecwid-Product ecwid-Product-63511408" itemscope itemtype="http://schema.org/Product" data-single-product-id="63511408"><div itemprop="image"></div><div class="ecwid-title" itemprop="name"></div><div itemtype="http://schema.org/Offer" itemscope itemprop="offers"><div class="ecwid-productBrowser-price ecwid-price" itemprop="price"></div></div><div customprop="addtobag"></div></div><script type="text/javascript" src="https://app.ecwid.com/script.js?9102557&data_platform=singleproduct" charset="utf-8"></script><script type="text/javascript">xSingleProduct()</script>
-            </div>
-            <div class="col-sm-4">
-                <div class="ecwid ecwid-SingleProduct ecwid-Product ecwid-Product-63511522" itemscope itemtype="http://schema.org/Product" data-single-product-id="63511522"><div itemprop="image"></div><div class="ecwid-title" itemprop="name"></div><div itemtype="http://schema.org/Offer" itemscope itemprop="offers"><div class="ecwid-productBrowser-price ecwid-price" itemprop="price"></div></div><div customprop="addtobag"></div></div><script type="text/javascript" src="https://app.ecwid.com/script.js?9102557&data_platform=singleproduct" charset="utf-8"></script><script type="text/javascript">xSingleProduct()</script>
-            </div>
-            <div class="col-sm-4">
-                <div class="ecwid ecwid-SingleProduct ecwid-Product ecwid-Product-63748803" itemscope itemtype="http://schema.org/Product" data-single-product-id="63748803"><div itemprop="image"></div><div class="ecwid-title" itemprop="name"></div><div itemtype="http://schema.org/Offer" itemscope itemprop="offers"><div class="ecwid-productBrowser-price ecwid-price" itemprop="price"></div></div><div customprop="addtobag"></div></div><script type="text/javascript" src="https://app.ecwid.com/script.js?9102557&data_platform=singleproduct" charset="utf-8"></script><script type="text/javascript">xSingleProduct()</script>
-            </div>
-        </div>
-        <div class="row padding-40-up" >
-            <div class="col-sm-4 ">
-                <div class="ecwid ecwid-SingleProduct ecwid-Product ecwid-Product-63748881" itemscope itemtype="http://schema.org/Product" data-single-product-id="63748881"><div itemprop="image"></div><div class="ecwid-title" itemprop="name"></div><div itemtype="http://schema.org/Offer" itemscope itemprop="offers"><div class="ecwid-productBrowser-price ecwid-price" itemprop="price"></div></div><div customprop="addtobag"></div></div><script type="text/javascript" src="https://app.ecwid.com/script.js?9102557&data_platform=singleproduct" charset="utf-8"></script><script type="text/javascript">xSingleProduct()</script>
-            </div>
-            <div class="col-sm-4 ">
-                <div class="ecwid ecwid-SingleProduct ecwid-Product ecwid-Product-63748920" itemscope itemtype="http://schema.org/Product" data-single-product-id="63748920"><div itemprop="image"></div><div class="ecwid-title" itemprop="name"></div><div itemtype="http://schema.org/Offer" itemscope itemprop="offers"><div class="ecwid-productBrowser-price ecwid-price" itemprop="price"></div></div><div customprop="addtobag"></div></div><script type="text/javascript" src="https://app.ecwid.com/script.js?9102557&data_platform=singleproduct" charset="utf-8"></script><script type="text/javascript">xSingleProduct()</script>
-            </div>
-        </div>
-    </div>
 
-    <footer class="footer">
-        <div class="container">
-            <audio-play-list></audio-play-list>
-            <p>© 2015 Marc Ribo.</p>
-        </div>
-    </footer>
-    <script src="dist/app.min.js"></script>
-</body>
+		<!-- JavaScript always at the end for efficiency -->
+		<div id="scripts"></div>
+		<!-- Soundcloud -->
+		<script type="text/javascript" src="js/soundcloud.player.api.js"></script>
+		<script type="text/javascript" src="js/sc-player.js"></script>
+		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<!-- Include all compiled plugins (below), or include individual files as needed -->
+		<script src="js/bootstrap.min.js"></script>
+	</body>
 </html>
