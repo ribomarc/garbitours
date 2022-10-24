@@ -7,7 +7,7 @@
                 home: 'Home',
                 aboutUs: 'About us',
                 program: 'Tours',             
-                gallery: 'Gallery',                                
+                gallery: 'Book',                                
                 contact: 'Contact'
             },
             cat: {
