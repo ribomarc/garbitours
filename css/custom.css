@@ -90,7 +90,7 @@
 body {
 	padding-top: 0px;
 	padding-bottom: 0px; /* was 100px, changed 24.06.15 */
-	background-color: #9cf1ff; /* #2C3E50; #F8DCBE */
+	background-color: #FFFFFF; /* #2C3E50; #F8DCBE */
 }
 
 /* latin for font Playball*/
@@ -298,13 +298,24 @@ IMG.displayed {
     margin-right: auto }
 
 .jumbotron {
-	background-image: url("http://garbitours.com/img/DSC_5162_large_bg.jpg");
-	background-size: cover;
+	background-image: url("file:///C:/Users/Home/Documents/Git/garbitours/img/home_mobile.jpg");
+	
 	/*min-width: 1920px;*/
-	min-height: 345px;
-	overflow: hidden;
-	color: #0015ce;
+	
+	
 }
+
+/* For devices 400px and larger: */
+@media only screen and (min-device-width: 400px) {
+	.jumbotron {
+		background-image: url("http://garbitours.com/img/IMG_7854_large_bg.jpg");
+		min-height: 450px;
+		background-size: cover;
+		width: auto;
+		overflow: hidden;
+		color: #0015ce;
+	}
+  }
 
 /* Used in index.html */
 .jumb-text-padding

@@ -15,7 +15,7 @@
                 home: 'Home',
                 aboutUs: 'Qui som',
                 program: 'Tours',
-                gallery: 'Fotos',                
+                gallery: 'Reserva',                
                 contact: 'Contacte'
             }
         };
@@ -40,20 +40,6 @@
                     return 'templates/' + lang + '/program.html';
                 }
             })
-            .when('/:language?/gallery', {
-                templateUrl: 'templates/gallery/gallery-home.html',
-                controller: 'galleryCtrl'
-            })
-            .when('/:language?/gallery/:album', {
-                templateUrl: function(params) {
-                    var album = params.album;
-
-                    album = ~['book', 'usa', 'dubai', 'israel', 'moroco', 'creta', 'switzerland'].indexOf(album) ? album : 'book';
-
-                    return 'templates/gallery/' + album + '.html';
-                },
-                controller: 'albumCtrl'
-            })            
             .otherwise({
                 redirectTo: '/'
             });
@@ -76,7 +62,7 @@
             },
             section: function() {
                 var path = $location.path(),
-                    pageSections = ['about-us', 'gallery', 'gifts', 'program', 'tips'],
+                    pageSections = ['about-us', 'gallery', 'program'],
                     index = pageSections.length,
                     section = '';
 
@@ -133,55 +119,19 @@
         $scope.noWrapSlides = false;
         $scope.active = 0;
         $scope.slides = [
-            'http://garbitours.com/img/carousel/DSC_4568.JPG',
-            'http://garbitours.com/img/carousel/DSC_4453.JPG',
-            'http://garbitours.com/img/carousel/DSC_5039.JPG',
-            'http://garbitours.com/img/carousel/DSC_5015.JPG',
-            'http://garbitours.com/img/carousel/DSC_4761.JPG',
-            'http://garbitours.com/img/carousel/DSC_4474.JPG',
-            'http://garbitours.com/img/carousel/DSC_4573.JPG'
+            'http://garbitours.com/img/carousel/20201018_150650.JPG',
+            'http://garbitours.com/img/carousel/20220608_151748.JPG',
+            'http://garbitours.com/img/carousel/DJI_0007.JPG',
+            'http://garbitours.com/img/carousel/IMG_5863.JPG',
+            'http://garbitours.com/img/carousel/IMG_5888.JPG',
+            'http://garbitours.com/img/carousel/IMG_7672.JPG'
         ];
     }
-
-    function galleryCtrl($scope, getParams) {
-        var language = getParams.language();
-
-        if(language === 'en') {
-            $scope.bookText = 'Our Pre-wedding Book!';
-            $scope.travelText = 'We love to travel!';
-            $scope.morocoText = 'Moroco';
-            $scope.switzerlandText = 'Switzerland';
-        } else if(language === 'cat') {
-            $scope.bookText = 'El nostre book pre-casament!';
-            $scope.travelText = 'Ens encanta viatjar!';
-            $scope.morocoText = 'Marroc';
-            $scope.switzerlandText = 'Suissa';
-        } else {
-            $scope.bookText = 'Nosso Pre-wedding Book!';
-            $scope.travelText = 'Adoramos viajar!';
-            $scope.morocoText = 'Marrocos';
-            $scope.switzerlandText = 'Suíça';
-        }
-    }
-
-    function albumCtrl($scope, getParams) {
-        var language = getParams.language();
-
-        if(language === 'en') {
-            $scope.back = 'Back to gallery';
-        } else if(language === 'cat') {
-            $scope.back = 'Enrere';
-        } else {
-            $scope.back = 'Voltar';
-        }
-    }   
 
     angular.module('app', ['ngRoute', 'ngAnimate', 'ui.bootstrap'])
         .config(['$routeProvider', config])
         .factory('getParams', ['$location', getParams])
         .controller('navBarCtrl', ['$rootScope', 'getParams', '$uibModal', '$window', navBarCtrl])
-        .controller('homeCtrl', ['$scope', 'getParams', homeCtrl])
-        .controller('galleryCtrl', ['$scope', 'getParams', galleryCtrl])
-        .controller('albumCtrl', ['$scope', 'getParams', albumCtrl])
+        .controller('homeCtrl', ['$scope', 'getParams', homeCtrl])        
         .directive('audioPlayList', [audioPlayList]);
 })();
