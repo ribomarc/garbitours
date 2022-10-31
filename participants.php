@@ -1,9 +1,9 @@
 <?php
 
-	define('DB_NAME','assistance_confirmation');
-	define('DB_USER','andressa_marc');
+	define('DB_NAME','contacts');
+	define('DB_USER','admin');
 	define('DB_PASSWORD','xyz.');
-	define('DB_HOST','andressaemarccom.ipagemysql.com');
+	define('DB_HOST','palomacalvocalvo62829.domaincommysql.com');
 	
 	$link = mysql_connect(DB_HOST, DB_USER, DB_PASSWORD);
 
@@ -17,7 +17,7 @@
 		die('Can\'t use ' .DB_NAME . ': ' .mysql_error());
 	}
 	
-	echo 'Thanks for coming! We appreciate it very much!';
+	echo 'Thanks for your message! We will contact you briefly.';
 	
 	$name = $_POST['contact-name'];
 	$email = $_POST['contact-email'];

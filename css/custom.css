@@ -65,7 +65,7 @@
 	padding-left: 40px;
 }
 
-/* affects page_gallery */
+/* affects page_book */
 .gallery {
 	padding-top: 100px;
 	padding-bottom: 100px;
@@ -79,12 +79,6 @@
 .table-width {
 	max-width: 1000px;
 	padding-bottom: 80px;
-}
-
-/* affects subpages of page_gallery */
-.sub-gallery {
-	padding-top: 60px;
-	padding-bottom: 100px;
 }
 
 body {
